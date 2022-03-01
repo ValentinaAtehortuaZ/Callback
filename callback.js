@@ -51,7 +51,7 @@ sumar(34,45,function(suma,numero1,numero2){
     e imprima despues de 3 segundos, si si lo deja acceder o no a la pagina*/
 
 
-    function RecibirUsuario(nombre,edad,password,callback){
+   /* function RecibirUsuario(nombre,edad,password,callback){
 
 
         setTimeout(function(){
@@ -78,7 +78,38 @@ sumar(34,45,function(suma,numero1,numero2){
             console.log(usuario.nombre+ "no eres mayor de edad,no puedes acceder a la pagina webcam ")
           
         }
+    })*/
+
+
+    //ejercicio 3
+
+    /* 1. Quiero recibir 5 numeros
+    2. Almacenar 5 numeros en un arreglo
+    3. llamar segunda funcion encargada de recorrer arreglo y entregar la suma de los numeros del arreglo
+
+    */
+
+    function almacenar(numero1,numero2,numero3,numero4,numero5,callback){
+
+        let numeros=Array(numero1,numero2,numero3,numero4,numero5)
+
+        callback(numeros)
+    
+    }
+
+    almacenar(2,4,5,6,3,function(numeros){
+
+        let contador=0;
+
+        numeros.forEach(function(numero) {
+            contador=contador + numero
+
+        })
+
+        console.log(` La sumatoria es: ${contador}`)
     })
+
+
 
 
     
